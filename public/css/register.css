@@ -1,0 +1,7 @@
+input:invalid{
+    border: solid 2px red
+}
+.formularioRegistro{
+    margin-top: 240px;
+    background-color: red;
+}
