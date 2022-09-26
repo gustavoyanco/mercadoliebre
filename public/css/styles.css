@@ -42,18 +42,22 @@ main {
 
 main section article {
     margin-bottom: 10px;
+    background-color: white;
+    border-radius: 10px;
 }
 
 main section article .fa-solid {
-    display: block;
+    display: flex;
     max-width: 60px;
     height: 60px;
     border: solid 2px green;
     border-radius: 50%;
     padding: 10px;
     position: relative;
-    left: 80%;
+    left: 66%;
     bottom: 50px;
+    font-size: 2rem;
+    color: green;    
 }
 main section article .fa-solid:hover {
     animation: truck 2s;
@@ -68,25 +72,31 @@ main section article .fa-solid:hover {
     width: 50%;
     padding: 10px;
 }
+.fas-fa-bars {
+    align-content: center;
+}
+
+.fa-solid {
+    color: #03264C;
+    font-size: 2em;
+}
 
 .formularioBuscar {
     background-color: #ffffff;
     border-radius: 5px;
     height: 40px;
     display: flex;
-    flex-wrap: wrap;
-    flex: 4;
+    flex-wrap: nowrap;
     align-items: center;
 }
 .fa-magnifying-glass {
     padding: 3px;
     font-size: 20px;
+    font-size: 1em;
 }
 form .input {
     padding: 10px;
     border: none;
-    flex-grow: 8;
-
 }
 
 .titular {
@@ -107,39 +117,29 @@ form .input {
     background-color: #03264C;
     color: white;
     border-radius: 15%;
-    padding: 3%;
-}
-
-.fas-fa-bars {
-    align-content: center;
-}
-
-.fa-solid {
-    color: #03264C;
+    padding: 1%;
 }
 
 .item {
     display: flex;
-    flex: wrap;
+    flex: nowrap;
     border-top: solid 1px #ebebeb;
     background-color: white;
     padding: 15px;
     align-items: baseline;
-    position:relative;
 }
-
-.fa-truck-fast {
-    font-size: 2rem;
-    color: green;
+.itemPrecioDescuento{
+    display: flex;
+    flex-wrap: nowrap;
 }
 .precio {
     font-size: 20px;
-    flex: 3;
+    flex: 7;
 }
 
 .descuento {
     color: green;
-    flex: 7;
+    flex: 3;
 }
 
 .descripcion {
@@ -147,44 +147,70 @@ form .input {
 }
 .descripcion:hover {
     opacity: 100%;
+    transition: 400ms;
 }
 
 
 
 /* mobile */
 @media (min-width: 100px) {
-    .descripcion {
-        display: none
-    }
 
     .navbar {
         display: none;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
+        align-items: baseline;
+    }
+    .topHeader{
+        width: 90%;
+        justify-content: center;
+        margin: auto;
+    }
+    .logo{
+        width: 90%;
+    }
+    .formularioBuscar {
+        width: 90%;
+        margin: auto;
     }
 }
 
 /* tablet */
-@media (min-width: 361px) {
+@media (min-width: 426px) {
 
     main section article {
         box-shadow: 0px 0px 20px #999;
+        width: 45%;
+    }
+    .topHeader{
+        width: 100%;
+        justify-content: center;
+        margin: auto;
+    }
+    .logo, .formularioBuscar{
+        width: 45%
+    }
+    form .input{
+        width: 100%;
+    }
+    .productos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
 
-
-}
+    }
 
 /* desktop */
 @media (min-width: 769px) {
+    .logo, .formularioBuscar{
+        width: 30%
+    }    
     main section article {
         width: 45%;
     }
 
     .burger-menu {
         display: none;
-    }
-
-    .descripcion {
-        display: block;
     }
 
     .navbar {
@@ -200,23 +226,24 @@ form .input {
         margin: 10px;
     }
 
-    .productos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-    }
     .item .precio .descuento{
         width: 50%;
     }
 }
-
-@media (min-width: 1200px) {
+/* desktop */
+@media (min-width: 1024px) {
     header {
         margin: 0 auto;
     }
 
     main section article {
         width: 22%;
+    }
+    footer .piePagina{
+        display: flex;
+    }
+    footer div{
+        padding: 10px;
     }
 }
 

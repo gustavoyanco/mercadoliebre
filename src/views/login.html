@@ -16,13 +16,21 @@
 <body>
     <header>
         <div class="topHeader">
-            <img src="/images/logo-mercado-liebre.svg" class="logo" alt="Logo de Mercado Liebre">
-            <div>
-                <input class="search-bar" placeholder="Buscar productos"></input>
-                <button class="fa-solid fa-magnifying-glass"></button>
+            <div class="logo">
+                <img src="/images/logo-mercado-liebre.svg" alt="Logo de Mercado Liebre">
             </div>
-            <p><i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+            <div class="formularioBuscar">
+                <form action="/login" method="GET">
+                    <input type="text" name="buscar" placeholder="Buscar productos, marcas y más" class="input"
+                        id="buscar">
+                </form>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div>
+                <p><i class="fa-solid fa-hand-holding-dollar"></i>Comprá en cuotas y sin tarjeta de crédito</p>
+            </div>
         </div>
+
         <nav class="navbar">
             <ul>
                 <li><a href="#">Ofertas</a></li>
@@ -36,33 +44,45 @@
                 <li><a href="">Mis compras </a><i class="fa-solid fa-basket-shopping"></i></li>
             </ul>
         </nav>
+
         <div class="burger-menu">
             <i class="fa-solid fa-bars"></i>
         </div>
     </header>
     <main class="formularioLogin">
-      <p>Hola Mundo</p>
+      <form action="/" method="GET">
+        <input type="text" name="usuario" placeholder="Nombre de Usuario" class="input" minlength="3" required>
+        <br>
+        <input type="password" name="password" class="password" placeholder="Contraseña" required>
+        <br>
+        <button type="submit">Enviar</button>
+
     </main>
     <section>
         <footer>
-            <i class="fa-solid fa-credit-card"></i>
-            <p class="titular">Pagá con tarjeta o en efectivo</p>
-            <p>Con MercadoLiebreCash tenés cuotas sin
-                interés con tarjeta o efectivo en puntos de
-                pago ¡Y siempre es seguro!</p>
-
-            <i class="fa-solid fa-gift"></i>
-            <p class="titular">Envío gratis dede los $2500</p>
-            <p>Sólo por estar registrad@ en MercadoLiebre
-                tenés envíos gratis en miles de item.
-                Es un beneficio de MercadoPuntos.</p>
-
-            <i class="fa-solid fa-user-shield"></i>
-            <p class="titular">Seguridad de principio a fin</p>
-            <p>¿No te gusta? ¡Devolvelo! En MercadoLiebre
-                no hay nada que no puedas hacer porque
-                siempre estás protegid@</p>
-
+            <div class="piePagina">
+                <div>
+                    <i class="fa-solid fa-credit-card"></i>
+                    <p class="titular">Pagá con tarjeta o en efectivo</p>
+                    <p>Con MercadoLiebreCash tenés cuotas sin
+                        interés con tarjeta o efectivo en puntos de
+                        pago ¡Y siempre es seguro!</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-gift"></i>
+                    <p class="titular">Envío gratis dede los $2500</p>
+                    <p>Sólo por estar registrad@ en MercadoLiebre
+                        tenés envíos gratis en miles de item.
+                        Es un beneficio de MercadoPuntos.</p>
+                </div>
+                <div>
+                    <i class="fa-solid fa-user-shield"></i>
+                    <p class="titular">Seguridad de principio a fin</p>
+                    <p>¿No te gusta? ¡Devolvelo! En MercadoLiebre
+                        no hay nada que no puedas hacer porque
+                        siempre estás protegid@</p>
+                </div>
+            </div>
             <p>Copyright © 1999-2022 MercadoLiebre S.R.L.</p>
         </footer>
     </section>
